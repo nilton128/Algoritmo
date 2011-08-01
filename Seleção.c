@@ -5,21 +5,21 @@ void selecao(int ta){
      vet=(int*)malloc(sizeof(int)*ta);
      printf("\tDigite\n");
      for(i=0;i<ta;i++){
-		scanf("%d",&vet[i]);
-        }
+	scanf("%d",&vet[i]);
+     }
      for(i=0;i<ta-1;i++){
-		min = i;
+	min = i;
         for(j=i+1;j<ta;j++){
-            if (vet[j]<vet[min]){
+            if(vet[j]<vet[min]){
                 min = j;
-                }
+            }
         }
         temp=vet[i];
         vet[i]=vet[min];
         vet[min]=temp;
     }
-    for (k = 0;k<ta;k++){
-    printf("\n%d ", vet[k]);
+    for(k = 0;k<ta;k++){
+    	printf("\n%d ", vet[k]);
     }
 }
 int main(){
